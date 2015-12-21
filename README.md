@@ -1,0 +1,2 @@
+# MacaoTelecom
+a helloworld project
