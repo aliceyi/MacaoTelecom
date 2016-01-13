@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"  name="viewport">
+	<meta name="format-detection" content="telephone=no" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>mslider</title>
+	<link rel="stylesheet" type="text/css" href="./css/mslider.css">
+	<script type="text/javascript" src="./js/jquery-1.7.min.js"></script>
+	<script type="text/javascript" src="./js/mslider.js"></script>
+	
+</head>
+<body>
+	<div style="padding-bottom:100px;"></div>
+	<div class="mSlider"></div>
+	<script type="text/javascript">
+		var slider = new moogo.mSlider({
+			container:$(".mSlider"),
+			callback:function(){
+				// to do 
+				//console.log(this.getValue().min+" "+ this.getValue().max);
+			}
+		})
+	</script>
+</body>
+</html>

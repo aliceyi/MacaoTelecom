@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<title>输入支付密码</title>
+	<link rel="stylesheet" href="./css/pwd.css">
+	<script type="text/javascript" src="./js/zepto.js"></script>
+	<script type="text/javascript" src="./js/pwd.js"></script>
+</head>
+<body>
+	<div class="password-box">
+		<input type="tel" id="password" name="password" maxlength="6" value="" pattern="\d*" autocomplete="off"/>
+		<ul class="password-ul">
+			<li><i style="visibility: hidden;"></i></li>
+			<li><i style="visibility: hidden;"></i></li>
+			<li><i style="visibility: hidden;"></i></li>
+			<li><i style="visibility: hidden;"></i></li>
+			<li><i style="visibility: hidden;"></i></li>
+			<li><i style="visibility: hidden;"></i></li>
+		</ul>
+	</div>
+	<input type="button" value="button" id="btn">
+	<script type="text/javascript">
+		// create pwd plugin
+		var pwd  = new mogoo.pwd({dom:$("#password")});
+		//get pwd value
+		$("#btn").click(function(){
+			alert(pwd.getValue());
+		})
+	</script>
+</body>
+</html>

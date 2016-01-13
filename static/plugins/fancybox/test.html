@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="./css/jquery.fancybox.css" media="screen" />
+	<link rel="stylesheet" type="text/css" href="./css/jquery.fancybox-thumbs.css" />
+	<!-- Add jQuery library -->
+	<script type="text/javascript" src="./js/jquery-1.9.0.min.js"></script>
+	<!-- Add fancyBox main JS and CSS files -->
+	<script type="text/javascript" src="./js/jquery.fancybox.js"></script>
+	<!-- Add Thumbnail helper (this is optional) -->
+	<script type="text/javascript" src="./js/jquery.fancybox-thumbs.js"></script>
+	<style type="text/css">
+		.fancybox-thumbs{
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<a class="fancybox-thumbs" data-fancybox-group="thumb" href="4_b.jpg" style="display:block;width:100%;height:640px;">
+		<img src="4_s.jpg" alt="" />
+	</a>
+
+	<a class="fancybox-thumbs" data-fancybox-group="thumb" href="3_b.jpg">
+		<img src="3_s.jpg" alt="" />
+	</a>
+
+	<a class="fancybox-thumbs" data-fancybox-group="thumb" href="2_b.jpg">
+		<img src="2_s.jpg" alt="" />
+	</a>
+
+	<a class="fancybox-thumbs" data-fancybox-group="thumb" href="1_b.jpg">
+		<img src="1_s.jpg" alt="" />
+	</a>
+<script type="text/javascript">
+		$('.fancybox-thumbs').fancybox({
+				prevEffect : 'none',
+				nextEffect : 'none',
+
+				closeBtn  : false,
+				arrows    : false,
+				nextClick : true,
+
+				helpers : {
+					thumbs : {
+						width  : 50,
+						height : 50
+					}
+				}
+			});
+	</script>
+</body>
+</html>

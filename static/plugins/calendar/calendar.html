@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="./css/calendar-date.css">
+
+	<script type="text/javascript" src="./js/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="./js/jquery.tools.min.js"></script>
+	<style type="text/css">
+	.bTextbox{}
+	.left{float: left;}
+	.bTextbox, .bTextarea { color: #333; border: 1px solid; border-color: #ddd #dadada #dadada #ddd; font-size: 14px; padding: 3px; vertical-align: middle; background: #fff none repeat scroll 0 0; width: 400px; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; box-shadow: inset 1px 1px 1px #eeeeee; -moz-box-shadow: inset 1px 1px 1px #eeeeee; -webkit-box-shadow: inset 1px 1px 1px #eeeeee; }
+	.bTextbox{
+		height: 32px;
+		line-height: 32px;
+		width: 120px;
+	}
+	</style>
+</head>
+<body>
+	<div class="" style="position:relative;">
+		<input class="bTextbox date left" type="date" data-orig-type="date" id="datePickerStart" name="dateStart" value="2015-05-20" data-value="2015-05-20" max="2015-06-19"> 
+		<div class="left" style="padding:0px 10px;line-height:32px;height:32px;">-</div> 
+		<input class="bTextbox date left" type="date" data-orig-type="date" id="datePickerStart" name="dateStart" value="2015-05-20" data-value="2015-05-20" max="2015-06-19">
+	</div>
+	<script type="text/javascript">
+		var fDay = 0;
+		        $.tools.dateinput.localize("zh", {
+		            months: "一月,二月,三月,四月,五月,六月,七月,八月,九月,十月,十一月,十二月",shortMonths: "一,二,三,四,五,六,七,八,九,十,十一,十二",days: "星期日,星期一,星期二,星期三,星期四,星期五,星期六",shortDays: "周日,周一,周二,周三,周四,周五,周六"
+		        });
+		        fDay = 1;
+
+		        $(":date").dateinput({ trigger: true, format: 'yyyy-mm-dd', lang: 'zh', firstDay: fDay });
+		        $(":date").bind("onShow onHide", function()  {
+		            $(this).parent().toggleClass("active"); 
+		        });
+		        if ($(":date:first").length != 0) {
+		            $(":date:first").data("dateinput").change(function() {
+		                // we use it's value for the seconds input min option
+		                $(":date:last").data("dateinput").setMin(this.getValue(), true);
+		            });
+		            $(":date:last").data("dateinput").change(function() {
+		                // we use it's value for the first input max option
+		                $(":date:first").data("dateinput").setMax(this.getValue(), true);
+		            });
+		        }
+	</script>
+</body>
+</html>

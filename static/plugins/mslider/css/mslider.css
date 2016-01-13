@@ -1,0 +1,38 @@
+.msliderCon{
+	position: relative;
+	top: 17px;
+	-webkit-user-select: none;  
+    -moz-user-select: none;     
+    -ms-user-select: none;    
+    -o-user-select: none;
+    user-select: none;
+}
+.msliderBg{
+	position: relative;
+	border: 1px solid #ccc;
+}
+.msliderLine{
+	position: absolute;
+    border: 1px solid #f65000;
+    text-align: center;
+    top: 0px;
+    right: 0px;
+}
+.minCon,.maxCon{
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	top: -10px;
+	background: #f65000;
+	border-radius: 15px;
+	cursor: pointer;
+}
+.minCon span,.maxCon span{
+	position: absolute;
+	display: inline-block;
+	height: 12px;
+	width: 20px;
+	top: -17px;
+	text-align: center;
+	color: #f65000;
+}

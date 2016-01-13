@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="./css/popWin.css">
+	<script type="text/javascript" src="./js/jquery-1.7.min.js"></script>
+	<script type="text/javascript" src="./js/popWin.js"></script>
+</head>
+<body>
+	<div id="popWinAud"></div>
+	<div id="audiencePopwin">TEST</div>
+	<script type="text/javascript">
+		var addAudiencepw = new moogo.popWin({
+			 container:$("#popWinAud"),
+		     width:740,
+		     height:565,
+		     title:"DEMO",
+		     content:$("#audiencePopwin"),
+		     closeCallback:function(){
+		     },
+		     afterCallback:function(){
+
+		     }
+		});
+		addAudiencepw.show();
+	</script>
+</body>
+</html>

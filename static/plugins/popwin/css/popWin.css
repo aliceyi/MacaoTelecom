@@ -1,0 +1,10 @@
+.popWall,.popDom{z-index:999999;}
+.popWin{position:fixed;display:none;width:100%;height:100%;top:0px;z-index:100000;-webkit-user-select:none;}
+.popWall{position:fixed;top:0px;bottom:0px;left:0px;right:0px;background:#000;opacity:0.5;filter:alpha(opacity=50);}
+.popDom{position:fixed;*position: absolute;background: #fff;border: 1px solid #bcbcbc;top: 50%;left: 50%;overflow: hidden;z-index:999999 }
+.titleDom{cursor:move;position: relative;height: 47px;background: #ececec;border-bottom: 1px solid #bcbcbc;}
+.titleCon{cursor:default;line-height: 45px;float: left;overflow: hidden;display: inline-block;height: 45px;color:#595959;padding-left: 15px;font-family: "微软雅黑";font-size: 18px;}
+.close{cursor:pointer; float: right;border: 1px solid red;height: 24px;width: 24px;margin: 10px 10px 0px 0px;background: #fff;border: 1px solid #cbcbcb;text-align: center;line-height: 24px;color: #848484;}
+.close:hover{border-color:#f80; color:#f80;}
+.bodyDom{background: #fff;position:relative;}
+.modal-open {overflow: hidden; }
